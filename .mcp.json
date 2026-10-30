@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "bridge": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@bridge-ds/mcp",
+        "--repo",
+        "peterbono/ai-design-system-demo"
+      ]
+    }
+  }
+}
