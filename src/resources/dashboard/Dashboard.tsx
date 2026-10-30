@@ -74,7 +74,6 @@ export function Dashboard() {
         <Alert
           tone="warning"
           announce="off"
-          className={styles.waiting}
           title={`${stats.pending.length} ${stats.pending.length === 1 ? 'order is' : 'orders are'} waiting to ship`}
           actionsPlacement="inline"
           actions={
