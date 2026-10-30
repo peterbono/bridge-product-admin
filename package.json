@@ -1,0 +1,40 @@
+{
+  "name": "bridge-product-admin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Product admin: a back office built with the Bridge design system from npm, the product repository Bridge explorations live in.",
+  "license": "FSL-1.1-MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@bridge-ds/react": "^1.8.2",
+    "@bridge-ds/tokens": "^1.6.0",
+    "@bridge-ds/toolbar": "file:vendor/bridge-ds-toolbar-0.0.0.tgz",
+    "@faker-js/faker": "10.6.0",
+    "@tanstack/react-query": "5.103.3",
+    "data-generator-retail": "5.15.4",
+    "date-fns": "3.6.0",
+    "lucide-react": "1.58.0",
+    "ra-core": "5.15.4",
+    "ra-data-fakerest": "5.15.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.89.0",
+    "react-router": "7.18.4",
+    "react-router-dom": "7.18.4",
+    "recharts": "3.10.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vitest": "4.0.5"
+  }
+}
