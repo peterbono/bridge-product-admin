@@ -20,6 +20,3 @@ npm run build
 - The Bridge toolbar is mounted in `src/App.tsx` with one line,
   `<BridgeToolbar ds="peterbono/ai-design-system-demo" product="admin-app" />`. Studio's "Try it in the product" opens
   an exploration's preview with `?bridge=<n>`: **Live product** is production, **This change** is the branch preview.
-
-`@bridge-ds/toolbar` is not on npm yet: `vendor/bridge-ds-toolbar-0.0.0.tgz` is a build of the package from the design
-system repository. Once it is published, run `npm i @bridge-ds/toolbar@^0.1.0` and delete `vendor/`.
