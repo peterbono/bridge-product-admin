@@ -164,3 +164,7 @@
   font-size: var(--font-size-200);
   font-weight: var(--font-weight-medium);
 }
+
+.waiting {
+  margin-block-end: var(--space-6);
+}

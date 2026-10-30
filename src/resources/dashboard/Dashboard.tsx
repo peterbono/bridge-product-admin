@@ -1,6 +1,6 @@
 import { lazy, Suspense, useMemo } from 'react';
 import { LinkBase, useGetList, useGetMany, useTranslate } from 'ra-core';
-import { Card, CardBody, CardHeader, EmptyState, Link, Skeleton } from '@bridge-ds/react';
+import { Alert, Button, Card, CardBody, CardHeader, EmptyState, Link, Skeleton } from '@bridge-ds/react';
 import { DollarSign, MessageSquareText, ShoppingBag, UserPlus } from 'lucide-react';
 import { startOfDay, subDays } from 'date-fns';
 import { Page } from '../../ra-bridge';
@@ -70,6 +70,22 @@ export function Dashboard() {
 
   return (
     <Page title={translate('dashboard.title')} subtitle={translate('dashboard.subtitle', { shop: tenant.name })}>
+      {!isPending && stats.pending.length > 0 && (
+        <Alert
+          tone="warning"
+          announce="off"
+          className={styles.waiting}
+          title={`${stats.pending.length} ${stats.pending.length === 1 ? 'order is' : 'orders are'} waiting to ship`}
+          actionsPlacement="inline"
+          actions={
+            <Button variant="secondary" size="sm" render={<LinkBase to="/orders" />}>
+              See orders
+            </Button>
+          }
+        >
+          The oldest one was placed {fmt.date(stats.pending[stats.pending.length - 1]!.date)}.
+        </Alert>
+      )}
       <div className={styles.kpis}>
         {isPending ? (
           Array.from({ length: 4 }, (_, i) => (
