@@ -72,6 +72,7 @@ export function Dashboard() {
     <Page title={translate('dashboard.title')} subtitle={translate('dashboard.subtitle', { shop: tenant.name })}>
       {!isPending && stats.pending.length > 0 && (
         <Alert
+          data-bridge-change="Orders waiting to ship alert"
           tone="warning"
           announce="off"
           title={`${stats.pending.length} ${stats.pending.length === 1 ? 'order is' : 'orders are'} waiting to ship`}
