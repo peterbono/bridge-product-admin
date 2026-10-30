@@ -5,6 +5,9 @@
   "type": "module",
   "description": "Product admin: a back office built with the Bridge design system from npm, the product repository Bridge explorations live in.",
   "license": "FSL-1.1-MIT",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
